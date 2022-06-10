@@ -25,6 +25,12 @@ char	*get_next_line(int fd)
 		return (NULL);
 	result = strgln(work);
 	work = strgal(work);
+	if(!ft_strlen(result))
+	{
+		free(work);
+		free(result);
+		return (NULL);
+	}
 	return (result);
 }
 
